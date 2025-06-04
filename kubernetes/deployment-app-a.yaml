@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: app-a
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: app-a-container
+          image: pranavpracto/sample-service-a:0.0.1-SNAPSHOT
+          ports:
+            - containerPort: 8080
+
