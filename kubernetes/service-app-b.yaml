@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: service
+metadata:
+  name: service-b
+spec:
+  selector: 
+    app: app-b
+  ports:
+    - protocol: HTTP
+      port: 9090
+      targetPort: 9090
+
