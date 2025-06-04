@@ -1,0 +1,13 @@
+service 1:-
+
+image : pranavpracto/sample-service-a:0.0.1-SNAPSHOT
+port : 8080
+endpoint : /get-message
+
+
+
+service 2:-
+
+image: pranavpracto/sample-service-b:0.0.1-SNAPSHOT
+port : 9090
+endpoint : /get-string
