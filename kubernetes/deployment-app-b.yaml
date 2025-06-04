@@ -8,6 +8,9 @@ spec:
     matchLabels:
       app: app-b
   template: 
+    metadata:
+      labels:
+        app: app-b
     spec:
       containers:
         - name: app-b
