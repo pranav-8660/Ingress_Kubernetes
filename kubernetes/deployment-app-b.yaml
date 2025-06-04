@@ -4,6 +4,9 @@ metadata:
   name: app-b
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: app-b
   template: 
     spec:
       containers:
