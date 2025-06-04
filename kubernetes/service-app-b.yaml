@@ -7,6 +7,6 @@ spec:
     app: app-b
   ports:
     - protocol: HTTP
-      port: 9090
+      port: 8080
       targetPort: 9090
 
