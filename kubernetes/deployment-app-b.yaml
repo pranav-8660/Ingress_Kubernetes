@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app-b
-          image: pranavpracto/sample-service-a:0.0.1-SNAPSHOT
+          image: pranavpracto/sample-service-b:0.0.1-SNAPSHOT
           ports:
             - containerPort: 9090
 
