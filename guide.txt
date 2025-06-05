@@ -11,3 +11,19 @@ service 2:-
 image: pranavpracto/sample-service-b:0.0.1-SNAPSHOT
 port : 9090
 endpoint : /get-string
+
+
+commands to run->
+run these scripts : scriptrun.sh(to apply all deployment,service,ingress yaml files
+		  : scriptdel.sh(to delete already running services,deployments,ingress ..if any)) 
+
+
+portforwarding if necessary->
+
+first curl to <ip>(localhost/public ip of the instance,both works) -> curl -I http://<ip>/a/get-message
+
+if no response, try to check the ports for services - > kubectl get svc -n ingress-nginx
+for "ingress-nginx-controller", it should recieve the load on 8080 and transfer to 80(80 for nginx), if not forward the port ->  kubectl port-forward -n ingress-nginx svc/ingress-nginx-controller 8080:80
+
+
+now it will work
