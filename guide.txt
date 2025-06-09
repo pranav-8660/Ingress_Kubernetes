@@ -25,5 +25,8 @@ first curl to <ip>(localhost/public ip of the instance,both works) -> curl -I ht
 if no response, try to check the ports for services - > kubectl get svc -n ingress-nginx
 for "ingress-nginx-controller", it should recieve the load on 8080 and transfer to 80(80 for nginx), if not forward the port ->  kubectl port-forward -n ingress-nginx svc/ingress-nginx-controller 8080:80
 
+access the apis using(only if port forwarded) else access using port 80 - 
+* http://<ip>:8080/a/get-message
+* http://<ip>:8080/b/get-string
 
 now it will work
